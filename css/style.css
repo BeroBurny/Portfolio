@@ -94,6 +94,30 @@ main hr {
 	display: table;
 	clear: both;
 }
+
+.projects, .galery {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.project, .picture {
+	opacity: 0.9;
+	margin: 2%;
+	position: relative;
+	border: 1px solid;
+	border-radius: 3px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+	background-color: #fff;
+}
+
+.project {
+	width: calc(46% - 2px);
+}
+
+.picture {
+	width: calc(29.3% - 2px);
+}
+
 /* Screen Optimization */
 @media (max-width: 1300px) {
 	body {
