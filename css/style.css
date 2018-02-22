@@ -10,7 +10,7 @@ body {
 	background-image: url(../svg/potrait.svg);
 	background-position: left top;
 	background-repeat: no-repeat;
-	background-size: 1100px;
+	background-size: 80%;
 }
 
 .header-page {
@@ -37,8 +37,7 @@ body {
 
 /* Main */
 main {
-	max-width: 1100px;
-	width: 100%;
+	width: 80%;
 	margin: auto;
 }
 
@@ -62,7 +61,7 @@ main hr {
 
 /* About */
 .about {
-	display: table;
+	display: block;
 	margin-bottom: 8%;
 }
 
@@ -80,7 +79,7 @@ main hr {
 	margin-bottom: 2%;
 }
 
-.about img {
+.potrait-space img {
 	position: -webkit-sticky;
 	position: sticky;
 	top: 2%;
@@ -94,6 +93,11 @@ main hr {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+.small-screen-image {
+	float: left;
+	display: none;
 }
 
 .galery {
@@ -110,9 +114,6 @@ main hr {
 	border-radius: 3px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
 	background-color: #fff;
-}
-
-.picture {
 	overflow: hidden;
 	display: block;
 	width: calc(29.3% - 2px);
@@ -131,12 +132,6 @@ main hr {
 
 /* Screen Optimization */
 @media (max-width: 1300px) {
-	body {
-		background-size: 80%;
-	}
-	main {
-		width: 80%;
-	}
 	.header-text h1 {
 		font-size: 8vw;
 	}
@@ -148,6 +143,20 @@ main hr {
 	}
 	main p {
 		font-size: 2.2vw;
+	}
+	.potrait-space{
+		display: none;
+	}
+	.small-screen-image {
+		width: 50%;
+		margin-right: 3%;
+		display: block;
+	}
+	.about-text {
+		width: 100%;
+	}
+	.picture {
+		width: calc(46% - 2px);
 	}
 }
 
@@ -164,6 +173,14 @@ main hr {
 	main p {
 		font-size: 5vw;
 	}
+	.small-screen-image {
+		width: 100%;
+		margin-right: none;
+		margin-bottom: 4%;
+	}
+	.picture {
+		width: calc(100% - 2px);
+	}
 }
 
 @media (orientation: portrait) {
@@ -174,6 +191,11 @@ main hr {
 		top: 25%;
 	}
 	.about {
+		margin-bottom: 4%;
+	}
+	.small-screen-image {
+		width: 100%;
+		margin-right: none;
 		margin-bottom: 4%;
 	}
 }
